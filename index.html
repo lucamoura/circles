@@ -118,6 +118,54 @@
             color: #999;
             font-style: italic;
         }
+        
+        .spotify-section {
+            margin-top: 30px;
+            padding: 20px;
+            background: linear-gradient(135deg, #1db954, #1ed760);
+            border-radius: 12px;
+            color: white;
+            text-align: center;
+        }
+        
+        .spotify-section h2 {
+            margin: 0 0 10px 0;
+            font-size: 22px;
+        }
+        
+        .spotify-section p {
+            margin: 0 0 20px 0;
+            opacity: 0.9;
+        }
+        
+        .spotify-container {
+            background: rgba(255,255,255,0.1);
+            padding: 15px;
+            border-radius: 16px;
+            margin-bottom: 15px;
+        }
+        
+        .spotify-links {
+            margin-top: 15px;
+        }
+        
+        .spotify-link {
+            display: inline-block;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 25px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid rgba(255,255,255,0.3);
+        }
+        
+        .spotify-link:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
     </style>
 </head>
 <body>
@@ -138,6 +186,30 @@
         </table>
         
         <div class="stats" id="stats"></div>
+        
+        <div class="spotify-section">
+            <h2>🎧 Playlist das Músicas</h2>
+            <p>Ouça algumas dessas músicas na nossa playlist colaborativa do Spotify:</p>
+            <div class="spotify-container">
+                <iframe data-testid="embed-iframe" 
+                        style="border-radius:12px" 
+                        src="https://open.spotify.com/embed/playlist/5GRgtGPiLgc42kezrfAqv6?utm_source=generator" 
+                        width="100%" 
+                        height="352" 
+                        frameBorder="0" 
+                        allowfullscreen="" 
+                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" 
+                        loading="lazy">
+                </iframe>
+            </div>
+            <div class="spotify-links">
+                <a href="https://open.spotify.com/playlist/5GRgtGPiLgc42kezrfAqv6?si=8NtXOfx4R8CSjF6OXg1b7A" 
+                   target="_blank" 
+                   class="spotify-link">
+                   🎵 Abrir no Spotify
+                </a>
+            </div>
+        </div>
     </div>
 
     <script>
