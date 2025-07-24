@@ -48,6 +48,14 @@
             text-align: left;
         }
         
+        .index-column {
+            text-align: center;
+            width: 50px;
+            font-weight: 600;
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+        
         .user-column {
             text-align: center;
             font-weight: 600;
@@ -175,6 +183,7 @@
         <table>
             <thead>
                 <tr>
+                    <th>#</th>
                     <th>Usuário</th>
                     <th>Posição</th>
                     <th>Música</th>
@@ -214,214 +223,817 @@
 
     <script>
         const musicData = [
-            {user: 1, songs: [
-                {music: "why sundays are so depressing", artist: "thestrokes"},
-                {music: "dont smile", artist: "sabrina carpenter"},
-                {music: "crimson and clover", artist: "tommy james"}
-            ]},
-            {user: 2, songs: [
-                {music: "Hole in My Soul", artist: "Aerosmith"},
-                {music: "Air in G String", artist: "Bach"},
-                {music: "Eu sou o caso deles", artist: "Novos Baianos"}
-            ]},
-            {user: 3, songs: [
-                {music: "Songbird", artist: "Fleetwood Mac"},
-                {music: "Footsteps in the Dark", artist: "The Isley Brothers"},
-                {music: "When We Are Young", artist: "The Killers"}
-            ]},
-            {user: 4, songs: [
-                {music: "As 3 primeiras músicas do album Dominguinho", artist: ""},
-                {music: "Arriadin por tu", artist: ""},
-                {music: "Beethoven symphony No.9", artist: ""}
-            ]},
-            {user: 5, songs: [
-                {music: "Something", artist: "beatles"},
-                {music: "TV", artist: "Billie Eilish"},
-                {music: "Saudade", artist: "Zezé di Camargo e Luciano"},
-                {music: "River", artist: "Leon Bridges"}
-            ]},
-            {user: 6, songs: [
-                {music: "rolê de fortal", artist: "Lil Whind"},
-                {music: "obsessão", artist: "tony guerra/forró sacode"},
-                {music: "Dont stop me now", artist: "Queen"}
-            ]},
-            {user: 7, songs: [
-                {music: "Holy Ghost", artist: ""},
-                {music: "Killer Queen", artist: ""},
-                {music: "I Hate Everything About You", artist: ""}
-            ]},
-            {user: 8, songs: [
-                {music: "Goodness of God", artist: "Jenn Johnson"},
-                {music: "Rainbow Eyes", artist: "Rainbow"},
-                {music: "Sabbath Bloody Sabbath", artist: "Black Sabbath"}
-            ]},
-            {user: 9, songs: [
-                {music: "Take the power back", artist: ""},
-                {music: "Emerald Sword", artist: ""},
-                {music: "Manchete dos jornais", artist: ""}
-            ]},
-            {user: 10, songs: [
-                {music: "Dont matter", artist: "Akon"},
-                {music: "la morocha", artist: "Luckra"},
-                {music: "Beautiful Girl", artist: "Sean Kingston"}
-            ]},
-            {user: 11, songs: [
-                {music: "Wheels", artist: "Foo Fighters"},
-                {music: "Blinded in Chains", artist: "Avenged Sevenfold"},
-                {music: "Not Strong Enough", artist: "Apocalyptica"},
-                {music: "Just Stop", artist: "Disturbed"}
-            ]},
-            {user: 12, songs: [
-                {music: "All too well", artist: "Taylor Swift"},
-                {music: "A letter to elise", artist: "The Cure"},
-                {music: "The Bread", artist: "If"},
-                {music: "Good Luck Baby", artist: "Chappel Roan"},
-                {music: "Graceless", artist: "The national"},
-                {music: "Hardfeelings", artist: "Lorde"}
-            ]},
-            {user: 13, songs: [
-                {music: "O que a gente podia ser", artist: "vanguard"},
-                {music: "So pra te mostrar", artist: "Hebert Viana"},
-                {music: "Anormal", artist: "Pato Fu"}
-            ]},
-            {user: 14, songs: [
-                {music: "Ainda tempo de ser feliz", artist: "Beth Carvalho"},
-                {music: "Vou festejar", artist: "Beth Carvalho"},
-                {music: "Apesar de Você", artist: "Chico Buarque"}
-            ]},
-            {user: 15, songs: [
-                {music: "Amina", artist: "tasha e tracie"},
-                {music: "disk p@#$%&!", artist: "Duquesa"},
-                {music: "aeromoça", artist: "Xamã e flora matos"}
-            ]},
-            {user: 16, songs: [
-                {music: "Bilionaire", artist: "Bruno Mars"},
-                {music: "Amor e Sexo", artist: "Rita lee"},
-                {music: "20 e poucos", artist: "Fábio Jr"}
-            ]},
-            {user: 17, songs: [
-                {music: "Decida/Seu amor ainda é tudo", artist: "Panda com Icaro e Gilmar"},
-                {music: "Vou te amar (Cigana)/Mentes tão bem", artist: "Murilo Huff"},
-                {music: "Servo por amor", artist: "GBA Stage"},
-                {music: "Me aceita de volta", artist: "Colo de Deus"},
-                {music: "Decisão", artist: "Geradas pela Imaculada"}
-            ]},
-            {user: 18, songs: [
-                {music: "Just can't get enough", artist: "Black Eyed Peas"},
-                {music: "Garden of Eden", artist: "Lady Gaga"},
-                {music: "The Only Exception", artist: "Paramore"},
-                {music: "Clocks", artist: "Coldplay"},
-                {music: "A Deusa da Minha rua", artist: "Versão Marcelo Barra"},
-                {music: "Felicidade", artist: "Marcelo Jeneci"},
-                {music: "Selva Branca", artist: "Bell Marques"}
-            ]},
-            {user: 19, songs: [
-                {music: "Adam's song", artist: "blink 182"},
-                {music: "All I wanted", artist: "paramore"},
-                {music: "Somos que podemos ser", artist: "Engenheiros dos Hawaii"}
-            ]},
-            {user: 20, songs: [
-                {music: "Mundo inteiro", artist: "Desejo de menina"},
-                {music: "DNA do mato", artist: "Zé vaqueiro"},
-                {music: "Invicto", artist: "Filipi Ret"}
-            ]},
-            {user: 21, songs: [
-                {music: "Nocaute", artist: "Jean Tassy, Iuri Rio Branco e Liniker"},
-                {music: "Só se fu...", artist: "Jean Tassy, Iuri Rio Branco, Yago OPróprio"},
-                {music: "Dias Melhores", artist: "Jean Tassy, Iuri Rio Branco"}
-            ]},
-            {user: 22, songs: [
-                {music: "Envolvimento", artist: "Mc Loma"},
-                {music: "liquor Store", artist: "Bruno Mars"},
-                {music: "Vegas Brasil", artist: "erva da jamaica"}
-            ]},
-            {user: 23, songs: [
-                {music: "wall of arms", artist: "the maccabees"},
-                {music: "elephants", artist: "warpaint"},
-                {music: "jigsaw falling into place", artist: "radiohead"}
-            ]},
-            {user: 24, songs: [
-                {music: "No Pares", artist: "RBD"},
-                {music: "Photograph", artist: "Ed Sheeran"},
-                {music: "Trem da Saudade", artist: "Forró dos Plays"}
-            ]},
-            {user: 25, songs: [
-                {music: "Aquieta minh'alma", artist: "Ministério Zoe"},
-                {music: "Halo", artist: "Beyoncé"},
-                {music: "Teile Zaga", artist: "AtilaKw Remix"}
-            ]},
-            {user: 26, songs: [
-                {music: "One more time", artist: "Daft Punk"},
-                {music: "O homem da gravata florida", artist: "Jorge Ben Jor"}
-            ]},
-            {user: 27, songs: [
-                {music: "pneuma", artist: "Tool"},
-                {music: "piano man", artist: "Billy Joel"},
-                {music: "Eidolon", artist: "Karnivool"}
-            ]},
-            {user: 28, songs: [
-                {music: "Chico", artist: "Luisa Sonza"},
-                {music: "Mulher do ano", artist: "Luísa Sonza"},
-                {music: "Poesia acustica 13", artist: ""}
-            ]},
-            {user: 29, songs: [
-                {music: "Bohemian Rhapsody", artist: ""},
-                {music: "Numb", artist: ""},
-                {music: "Era um Garoto que como eu", artist: ""}
-            ]},
-            {user: 30, songs: [
-                {music: "Temporal", artist: "Calypson"},
-                {music: "Não dá para não pensar em você", artist: "Sandy e Junior"},
-                {music: "Avisa lá", artist: "Anitta"}
-            ]},
-            {user: 31, songs: [
-                {music: "Olha oq ce fez comigo", artist: "Wiu"},
-                {music: "Sunshine", artist: "Delacruz"},
-                {music: "Não Sei Mais Falar de Amor", artist: "Gaab e Jorge Vercillo"},
-                {music: "Garota Nota 100", artist: "Mc Marcinho, Sorriso Maroto e Delacruz"}
-            ]},
-            {user: 32, songs: [
-                {music: "A maior saudade", artist: "Henrique e Juliano"},
-                {music: "Pegada Que Desgrama", artist: "Naiara Azevedo"},
-                {music: "Eu tenho Medo", artist: "Zé Vaqueiro"},
-                {music: "De quem é a culpa", artist: "Marilia Mendonça"}
-            ]},
-            {user: 33, songs: [
-                {music: "Músicas de amor nunca mais (part. Gigantes)", artist: "BK"},
-                {music: "Coração Partido / Nosso Primeiro Beijo / Até Que Durou", artist: ""},
-                {music: "Mágica", artist: "Calcinha Preta"}
-            ]},
-            {user: 34, songs: [
-                {music: "High Hopes", artist: "Panic! At The Disco"},
-                {music: "Do I Wanna Know?", artist: "Arctic Monkeys"},
-                {music: "Boulevard of Broken Dreams", artist: "Green Day"}
-            ]},
-            {user: 35, songs: [
-                {music: "Fairy tale", artist: "Shaman"},
-                {music: "Grace", artist: "jeff buckley"},
-                {music: "Million years ago", artist: "Adele"}
-            ]},
-            {user: 36, songs: [
-                {music: "Riptide", artist: "Vance Joy"},
-                {music: "Young Blood", artist: "The Naked and Famous"},
-                {music: "Heat Waves", artist: "Glass Animals"}
-            ]},
-            {user: 37, songs: [
-                {music: "Dancin Krono remix", artist: "Aerosmith"},
-                {music: "Otherside", artist: "Red Hot"},
-                {music: "That's My Way", artist: "Edi Rock"}
-            ]},
-            {user: 38, songs: [
-                {music: "good vibrations", artist: "beach boys"},
-                {music: "lamento sertanejo", artist: "gilberto gil"},
-                {music: "money", artist: "pink floyd"}
-            ]}
-        ];
+        {
+                "user": 1,
+                "songs": [
+                        {
+                                "music": "why sundays are so depressing",
+                                "artist": "thestrokes"
+                        },
+                        {
+                                "music": "dont smile",
+                                "artist": "sabrina carpenter"
+                        },
+                        {
+                                "music": "crimson and clover",
+                                "artist": "tommy james"
+                        }
+                ]
+        },
+        {
+                "user": 2,
+                "songs": [
+                        {
+                                "music": "Hole in My Soul",
+                                "artist": "Aerosmith"
+                        },
+                        {
+                                "music": "Air in G String",
+                                "artist": "Bach"
+                        },
+                        {
+                                "music": "Eu sou o caso deles",
+                                "artist": "Novos Baianos"
+                        }
+                ]
+        },
+        {
+                "user": 3,
+                "songs": [
+                        {
+                                "music": "Songbird",
+                                "artist": "Fleetwood Mac"
+                        },
+                        {
+                                "music": "Footsteps in the Dark",
+                                "artist": "The Isley Brothers"
+                        },
+                        {
+                                "music": "When We Are Young",
+                                "artist": "The Killers"
+                        }
+                ]
+        },
+        {
+                "user": 4,
+                "songs": [
+                        {
+                                "music": "As 3 primeiras músicas do album Dominguinho",
+                                "artist": ""
+                        },
+                        {
+                                "music": "Arriadin por tu",
+                                "artist": ""
+                        },
+                        {
+                                "music": "Beethoven symphony No.9",
+                                "artist": ""
+                        }
+                ]
+        },
+        {
+                "user": 5,
+                "songs": [
+                        {
+                                "music": "Something",
+                                "artist": "beatles"
+                        },
+                        {
+                                "music": "TV",
+                                "artist": "Billie Eilish"
+                        },
+                        {
+                                "music": "Saudade",
+                                "artist": "Zezé di Camrago e Luciano"
+                        },
+                        {
+                                "music": "River",
+                                "artist": "Leon Bridges"
+                        }
+                ]
+        },
+        {
+                "user": 6,
+                "songs": [
+                        {
+                                "music": "rolê de fortal",
+                                "artist": "Lil Whind"
+                        },
+                        {
+                                "music": "obsessão",
+                                "artist": "tony guerra/forró sacode"
+                        },
+                        {
+                                "music": "Dont stop me now",
+                                "artist": "Queen"
+                        }
+                ]
+        },
+        {
+                "user": 7,
+                "songs": [
+                        {
+                                "music": "Holy Ghost",
+                                "artist": ""
+                        },
+                        {
+                                "music": "Killer Queen",
+                                "artist": ""
+                        },
+                        {
+                                "music": "I Hate Everything About You",
+                                "artist": ""
+                        }
+                ]
+        },
+        {
+                "user": 8,
+                "songs": [
+                        {
+                                "music": "Goodness of God",
+                                "artist": "Jenn Johnson"
+                        },
+                        {
+                                "music": "Rainbow Eyes",
+                                "artist": "Rainbow"
+                        },
+                        {
+                                "music": "Sabbath Bloody Sabbath",
+                                "artist": "Black Sabbath"
+                        }
+                ]
+        },
+        {
+                "user": 9,
+                "songs": [
+                        {
+                                "music": "Take the power back",
+                                "artist": ""
+                        },
+                        {
+                                "music": "Emerald Sword",
+                                "artist": ""
+                        },
+                        {
+                                "music": "Manchete dos jornais",
+                                "artist": ""
+                        }
+                ]
+        },
+        {
+                "user": 10,
+                "songs": [
+                        {
+                                "music": "Dont matter",
+                                "artist": "Akon"
+                        },
+                        {
+                                "music": "la morocha",
+                                "artist": "Luckra"
+                        },
+                        {
+                                "music": "Beautiful Girl",
+                                "artist": "Sean Kignston"
+                        }
+                ]
+        },
+        {
+                "user": 11,
+                "songs": [
+                        {
+                                "music": "Wheels",
+                                "artist": "Foo Fighters"
+                        },
+                        {
+                                "music": "Blinded in Chains",
+                                "artist": "Avenged Sevenfold"
+                        },
+                        {
+                                "music": "Not Strong Enough",
+                                "artist": "Apocalyptica"
+                        },
+                        {
+                                "music": "Just Stop",
+                                "artist": "Disturbed"
+                        }
+                ]
+        },
+        {
+                "user": 12,
+                "songs": [
+                        {
+                                "music": "All too well",
+                                "artist": "Taylor Swift"
+                        },
+                        {
+                                "music": "A letter to elise",
+                                "artist": "The Cure"
+                        },
+                        {
+                                "music": "The Bread",
+                                "artist": "If"
+                        },
+                        {
+                                "music": "Chappel Roan",
+                                "artist": "Good Luck Baby"
+                        },
+                        {
+                                "music": "The national",
+                                "artist": "Graceless"
+                        },
+                        {
+                                "music": "Lorde",
+                                "artist": "Hardfeelings"
+                        }
+                ]
+        },
+        {
+                "user": 13,
+                "songs": [
+                        {
+                                "music": "O que a gente podia ser",
+                                "artist": "vanguard"
+                        },
+                        {
+                                "music": "So pra te mostrar",
+                                "artist": "Hebert Viana"
+                        },
+                        {
+                                "music": "Anormal",
+                                "artist": "Pato Fu"
+                        }
+                ]
+        },
+        {
+                "user": 14,
+                "songs": [
+                        {
+                                "music": "Ainda tempo de ser feliz",
+                                "artist": "Beth Carvalho"
+                        },
+                        {
+                                "music": "Vou festejar",
+                                "artist": "Beth Carvalho"
+                        },
+                        {
+                                "music": "Apesar de Você",
+                                "artist": "Chico Buarque"
+                        }
+                ]
+        },
+        {
+                "user": 15,
+                "songs": [
+                        {
+                                "music": "Amina",
+                                "artist": "tasha e tracie"
+                        },
+                        {
+                                "music": "disk p@#$%&!",
+                                "artist": "Duquesa"
+                        },
+                        {
+                                "music": "aeromoça",
+                                "artist": "Xamã e flora matos"
+                        }
+                ]
+        },
+        {
+                "user": 16,
+                "songs": [
+                        {
+                                "music": "Bilionaire",
+                                "artist": "Bruno Mars"
+                        },
+                        {
+                                "music": "Amor e Sexo",
+                                "artist": "Rita lee"
+                        },
+                        {
+                                "music": "20 e poucos",
+                                "artist": "Fábio Jr"
+                        }
+                ]
+        },
+        {
+                "user": 17,
+                "songs": [
+                        {
+                                "music": "Decida/Seu amor ainda é tudo",
+                                "artist": "Panda com Icaro e Gilmar"
+                        },
+                        {
+                                "music": "Vou te amar (Cigana)/Mentes tão bem",
+                                "artist": "Murilo Huff"
+                        },
+                        {
+                                "music": "Servo por amor",
+                                "artist": "GBA Stage"
+                        },
+                        {
+                                "music": "Me aceita de volta",
+                                "artist": "Colo de Deus"
+                        },
+                        {
+                                "music": "Decisão",
+                                "artist": "Geradas pela Imaculada"
+                        }
+                ]
+        },
+        {
+                "user": 18,
+                "songs": [
+                        {
+                                "music": "Just can't get enough",
+                                "artist": "Black Eyed Peas"
+                        },
+                        {
+                                "music": "Garden of Eden",
+                                "artist": "Lady Gaga"
+                        },
+                        {
+                                "music": "The Only Exception",
+                                "artist": "Paramore"
+                        },
+                        {
+                                "music": "Clocks",
+                                "artist": "Coldplay"
+                        },
+                        {
+                                "music": "A Deusa da Minha rua",
+                                "artist": "Versão Marcelo Barra"
+                        },
+                        {
+                                "music": "Felicidade",
+                                "artist": "Marcelo Jeneci"
+                        },
+                        {
+                                "music": "Selva Branca",
+                                "artist": "Bell Marques"
+                        }
+                ]
+        },
+        {
+                "user": 19,
+                "songs": [
+                        {
+                                "music": "Adam's song",
+                                "artist": "blink 182"
+                        },
+                        {
+                                "music": "All I wanted",
+                                "artist": "paramore"
+                        },
+                        {
+                                "music": "Somos que podemos ser",
+                                "artist": "Engenheiros dos Hawaii"
+                        }
+                ]
+        },
+        {
+                "user": 20,
+                "songs": [
+                        {
+                                "music": "Mundo inteiro",
+                                "artist": "Desejo de menina"
+                        },
+                        {
+                                "music": "DNA do mato",
+                                "artist": "Zé vaqueiro"
+                        },
+                        {
+                                "music": "Filipi Ret",
+                                "artist": "Invicto"
+                        }
+                ]
+        },
+        {
+                "user": 21,
+                "songs": [
+                        {
+                                "music": "Nocaute",
+                                "artist": "Jean Tassy, Iuri Rio Branco e Liniker"
+                        },
+                        {
+                                "music": "Só se fu...",
+                                "artist": "Jean Tassy, Iuri Rio Branco, Yago OPróprio"
+                        },
+                        {
+                                "music": "Dias Melhores",
+                                "artist": "Jean Tassy, Iuri Rio Branco"
+                        }
+                ]
+        },
+        {
+                "user": 22,
+                "songs": [
+                        {
+                                "music": "Envolvimento",
+                                "artist": "Mc Loma"
+                        },
+                        {
+                                "music": "liquor Store",
+                                "artist": "Bruno Mars"
+                        },
+                        {
+                                "music": "Vegas Brasil",
+                                "artist": "erva da jamaica"
+                        }
+                ]
+        },
+        {
+                "user": 23,
+                "songs": [
+                        {
+                                "music": "wall of arms",
+                                "artist": "the maccabees"
+                        },
+                        {
+                                "music": "elephants",
+                                "artist": "warpaint"
+                        },
+                        {
+                                "music": "jigsaw falling into place",
+                                "artist": "radiohead"
+                        }
+                ]
+        },
+        {
+                "user": 24,
+                "songs": [
+                        {
+                                "music": "No Pares",
+                                "artist": "RBD"
+                        },
+                        {
+                                "music": "Photograph",
+                                "artist": "Ed Sheeran"
+                        },
+                        {
+                                "music": "Trem da Saudade",
+                                "artist": "Forró dos Plays"
+                        }
+                ]
+        },
+        {
+                "user": 25,
+                "songs": [
+                        {
+                                "music": "Aquieta minh'alma",
+                                "artist": "Ministério Zoe"
+                        },
+                        {
+                                "music": "Halo",
+                                "artist": "Beyoncé"
+                        },
+                        {
+                                "music": "Quero café",
+                                "artist": "AtilaKw Remix"
+                        }
+                ]
+        },
+        {
+                "user": 26,
+                "songs": [
+                        {
+                                "music": "One more time",
+                                "artist": "Daft Punk"
+                        },
+                        {
+                                "music": "Menina mulher",
+                                "artist": "Pele preta"
+                        },
+                        {
+                                "music": "Smalltown Boy",
+                                "artist": "Bronski Beat"
+                        }
+                ]
+        },
+        {
+                "user": 27,
+                "songs": [
+                        {
+                                "music": "Tool",
+                                "artist": "pneuma"
+                        },
+                        {
+                                "music": "Billy Joel",
+                                "artist": "piano man"
+                        },
+                        {
+                                "music": "Karnivool",
+                                "artist": "Eidolon"
+                        }
+                ]
+        },
+        {
+                "user": 28,
+                "songs": [
+                        {
+                                "music": "Chico",
+                                "artist": "Luisa Sonza"
+                        },
+                        {
+                                "music": "Mulher do ano",
+                                "artist": "Luísa Sonza"
+                        },
+                        {
+                                "music": "Poesia acustica 13",
+                                "artist": ""
+                        }
+                ]
+        },
+        {
+                "user": 29,
+                "songs": [
+                        {
+                                "music": "Bohemian Rhapsondy.",
+                                "artist": "Queen"
+                        },
+                        {
+                                "music": "Numb.\t\t\t\t\t\t\t-",
+                                "artist": ""
+                        },
+                        {
+                                "music": "Era um Garoto que como eu.",
+                                "artist": "Engenheiros dos Hawaii"
+                        }
+                ]
+        },
+        {
+                "user": 30,
+                "songs": [
+                        {
+                                "music": "Temporal",
+                                "artist": "Calypson"
+                        },
+                        {
+                                "music": "Não dá para não pensar em você",
+                                "artist": "Sandy e Junior"
+                        },
+                        {
+                                "music": "Avisa lá",
+                                "artist": "Anitta"
+                        }
+                ]
+        },
+        {
+                "user": 31,
+                "songs": [
+                        {
+                                "music": "Olha oq ce fez comigo",
+                                "artist": "Wiu"
+                        },
+                        {
+                                "music": "Sunshine",
+                                "artist": "Delacruz"
+                        },
+                        {
+                                "music": "Não Sei Mais Falar de Amor",
+                                "artist": "Gaab e Jorge Vercillo"
+                        },
+                        {
+                                "music": "Garota Nota 100",
+                                "artist": "Mc Marcinho , Sorriso Maroto e Delacruz"
+                        }
+                ]
+        },
+        {
+                "user": 32,
+                "songs": [
+                        {
+                                "music": "A maior saudade",
+                                "artist": "Henrique e Juliano\t\t\t\t\t\t - Henrrique e Juliano"
+                        },
+                        {
+                                "music": "Pegada Que Desgrama",
+                                "artist": "Naiara Azevedo"
+                        },
+                        {
+                                "music": "Eu tenho Medo",
+                                "artist": "Zé Vaqueiro"
+                        },
+                        {
+                                "music": "De quem é a culpa",
+                                "artist": "Marilia Mendonça"
+                        }
+                ]
+        },
+        {
+                "user": 33,
+                "songs": [
+                        {
+                                "music": "Músicas de amor nunca mais (part. Gigantes)",
+                                "artist": "BK"
+                        },
+                        {
+                                "music": "Coração Partido / Nosso Primeiro Beijo / Até Que Durou \t\t\t\t\t-",
+                                "artist": ""
+                        },
+                        {
+                                "music": "Mágica",
+                                "artist": "Calcinha Preta"
+                        }
+                ]
+        },
+        {
+                "user": 34,
+                "songs": [
+                        {
+                                "music": "High Hopes",
+                                "artist": "Panic! At The Disco"
+                        },
+                        {
+                                "music": "Do I Wanna Know?",
+                                "artist": "Artic Monkeys"
+                        },
+                        {
+                                "music": "Boulevard of Broken Dreams",
+                                "artist": "Green Day"
+                        }
+                ]
+        },
+        {
+                "user": 35,
+                "songs": [
+                        {
+                                "music": "Fairy tale",
+                                "artist": "Shaman"
+                        },
+                        {
+                                "music": "Grace",
+                                "artist": "jeff buckley"
+                        },
+                        {
+                                "music": "Millions years ago",
+                                "artist": "Adele"
+                        }
+                ]
+        },
+        {
+                "user": 36,
+                "songs": [
+                        {
+                                "music": "Riptile",
+                                "artist": "Vance Joy"
+                        },
+                        {
+                                "music": "Young Blood",
+                                "artist": "The Naked and Famous"
+                        },
+                        {
+                                "music": "Heart Wave",
+                                "artist": "Glass Animals"
+                        }
+                ]
+        },
+        {
+                "user": 37,
+                "songs": [
+                        {
+                                "music": "Aarosmith Dancin Krono remix",
+                                "artist": ""
+                        },
+                        {
+                                "music": "Otherside",
+                                "artist": "Red Hot"
+                        },
+                        {
+                                "music": "Thats My Way",
+                                "artist": "Edi Rock"
+                        }
+                ]
+        },
+        {
+                "user": 38,
+                "songs": [
+                        {
+                                "music": "good vibrations",
+                                "artist": "beach boys"
+                        },
+                        {
+                                "music": "lamento sertanejo",
+                                "artist": "gilberto gil"
+                        },
+                        {
+                                "music": "money",
+                                "artist": "pink floyd"
+                        }
+                ]
+        },
+        {
+                "user": 39,
+                "songs": [
+                        {
+                                "music": "Mobile",
+                                "artist": "Avril"
+                        },
+                        {
+                                "music": "Trouble",
+                                "artist": "Coldplay"
+                        },
+                        {
+                                "music": "Uma estrela",
+                                "artist": "Desejo de Menina"
+                        },
+                        {
+                                "music": "I love you",
+                                "artist": "Billie Eilish"
+                        }
+                ]
+        },
+        {
+                "user": 40,
+                "songs": [
+                        {
+                                "music": "Holding Out for a Hero",
+                                "artist": "Bonnie Tyler"
+                        },
+                        {
+                                "music": "Religião",
+                                "artist": "Jão"
+                        },
+                        {
+                                "music": "Burn Them",
+                                "artist": "Greensky Bluegrass"
+                        }
+                ]
+        },
+        {
+                "user": 41,
+                "songs": [
+                        {
+                                "music": "Believer",
+                                "artist": "Imagine Dragons"
+                        },
+                        {
+                                "music": "Seis Cordas / Baião de Dois / Cavalo Lampião",
+                                "artist": "Wesley safadão"
+                        },
+                        {
+                                "music": "Quatro Semanas de Amor / Não Me Julgue / Do Meu Jeito",
+                                "artist": "Wesley safadão"
+                        }
+                ]
+        },
+        {
+                "user": 42,
+                "songs": [
+                        {
+                                "music": "Sandman",
+                                "artist": "Metallica"
+                        },
+                        {
+                                "music": "O sol",
+                                "artist": "Victor Kley"
+                        },
+                        {
+                                "music": "505",
+                                "artist": "Arctic Monkeys"
+                        }
+                ]
+        },
+        {
+                "user": 43,
+                "songs": [
+                        {
+                                "music": "Again",
+                                "artist": "yui"
+                        },
+                        {
+                                "music": "Amorous Rebound pt 2",
+                                "artist": "sumsar"
+                        },
+                        {
+                                "music": "Wish that you were here",
+                                "artist": "florence + the Machine"
+                        }
+                ]
+        },
+        {
+                "user": 44,
+                "songs": [
+                        {
+                                "music": "Nightcall",
+                                "artist": "Kavinsky"
+                        },
+                        {
+                                "music": "Korn",
+                                "artist": "Blind"
+                        },
+                        {
+                                "music": "du riechst so gut",
+                                "artist": "rammstein"
+                        }
+                ]
+        }
+];
 
         function generateTable() {
             const tbody = document.getElementById('musicTable');
             let totalSongs = 0;
             let usersWithoutArtist = 0;
+            let globalIndex = 1; // Contador global para todas as músicas
             
             musicData.forEach((userData, userIndex) => {
                 const blockClass = userIndex % 2 === 0 ? 'user-block-1' : 'user-block-2';
@@ -440,6 +1052,11 @@
                     if (songIndex === userData.songs.length - 1) {
                         row.classList.add('user-block-last');
                     }
+                    
+                    // Coluna do índice global
+                    const indexCell = document.createElement('td');
+                    indexCell.className = 'index-column';
+                    indexCell.textContent = globalIndex;
                     
                     const userCell = document.createElement('td');
                     userCell.className = 'user-column';
@@ -461,19 +1078,22 @@
                         artistCell.innerHTML = '<span class="empty-cell">Não informado</span>';
                     }
                     
+                    row.appendChild(indexCell);
                     row.appendChild(userCell);
                     row.appendChild(positionCell);
                     row.appendChild(musicCell);
                     row.appendChild(artistCell);
                     
                     tbody.appendChild(row);
+                    
+                    globalIndex++; // Incrementar o contador global
                 });
                 
                 // Adicionar linha separadora entre blocos (exceto após o último usuário)
                 if (userIndex < musicData.length - 1) {
                     const separatorRow = document.createElement('tr');
                     const separatorCell = document.createElement('td');
-                    separatorCell.colSpan = 4;
+                    separatorCell.colSpan = 5; // Agora são 5 colunas
                     separatorCell.className = 'user-separator';
                     separatorCell.innerHTML = '&nbsp;';
                     separatorRow.appendChild(separatorCell);
